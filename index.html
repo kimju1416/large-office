@@ -5,9 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>라지공유오피스 | 구미 구평 · 형곡 · 진평</title>
 <meta name="description" content="구미 구평본점 · 형곡점 · 진평점 세 곳의 공유오피스. 상주 호실과 전용석, 비상주 사무실. 24시간 연중무휴. 문의 070-7727-2221">
+<link rel="canonical" href="https://kimju1416.github.io/large-office/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="라지공유오피스">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://kimju1416.github.io/large-office/">
 <meta property="og:title" content="라지공유오피스 | 구미 구평 · 형곡 · 진평">
-<meta property="og:description" content="구평본점 13개 호실 · 형곡점 약 200평 · 진평점 층고 3.7m. 상주 · 전용석 · 비상주 사무실.">
+<meta property="og:description" content="구평본점 13개 호실 · 형곡점 약 200평 · 진평점 층고 3.7m. 상주 · 전용석 · 비상주 사무실. 24시간 연중무휴 · 070-7727-2221">
+<!-- 공유 카드 — 카카오톡·문자 미리보기가 쓰는 그림. 절대 주소여야 한다(base64 불가) -->
+<meta property="og:image" content="https://kimju1416.github.io/large-office/og.jpg">
+<meta property="og:image:secure_url" content="https://kimju1416.github.io/large-office/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="라지공유오피스 — 구미 구평 · 형곡 · 진평">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="라지공유오피스 | 구미 구평 · 형곡 · 진평">
+<meta name="twitter:description" content="상주 호실 · 전용석 · 비상주 사무실. 24시간 연중무휴 · 070-7727-2221">
+<meta name="twitter:image" content="https://kimju1416.github.io/large-office/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -166,17 +181,20 @@ body.js .branch.on{display:block}
 
 /* ─────── 공통 요금 ─────── */
 .offers{display:grid;grid-template-columns:1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
-.offer{padding:28px 0 26px;border-bottom:1px solid var(--rule)}
+.offer{padding:34px 0 32px;border-bottom:1px solid var(--rule)}
 .offer:last-child{border-bottom:0}
-.offer h4{font-size:20px;font-weight:500}
-.offer .d{font-size:14px;color:var(--ink2);margin-top:6px;line-height:1.6}
-.offer .rows{margin-top:20px;border-top:1px solid var(--rule)}
-.offer .row{display:flex;justify-content:space-between;align-items:baseline;
-  padding:13px 0;border-bottom:1px solid var(--rule2)}
-.offer .row:last-child{border-bottom:0;padding-bottom:2px}
-.offer .row .y{font-size:13.5px;color:var(--ink)}
-.offer .row .p{font-family:var(--serif);font-weight:500;font-size:23px;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-.offer .row .p span{font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--ink2);margin-left:4px;letter-spacing:0}
+.offer h4{font-size:23px;font-weight:500;letter-spacing:-.03em}
+.offer .d{font-size:15px;color:var(--ink2);margin-top:9px;line-height:1.65;max-width:22em}
+.offer .rows{margin-top:26px;max-width:17em}   /* 연차와 금액이 멀어지지 않게 폭을 잡는다 */
+/* 연차와 금액을 한 짝으로 붙여 읽는다 — 양끝으로 벌려 두면 가운데가 비어 눈이 헤맨다 */
+.offer .row{display:flex;align-items:baseline;gap:18px;
+  padding:17px 0;border-bottom:1px solid var(--rule2)}
+.offer .row:last-child{border-bottom:0;padding-bottom:0}
+.offer .row .y{font-size:16px;font-weight:500;color:var(--ink);flex:none;min-width:2.6em}
+.offer .row .p{margin-left:auto;font-family:var(--serif);font-weight:500;font-size:31px;
+  line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.offer .row .p span{font-family:var(--sans);font-size:14px;font-weight:400;color:var(--ink2);
+  margin-left:5px;letter-spacing:0}
 
 /* ─────── 제공 항목 ─────── */
 .kit{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
@@ -243,9 +261,8 @@ footer a{color:var(--ink2)}
   .plates{grid-template-columns:repeat(6,1fr)}
   .plate{grid-column:span 2}
   .plate.big{grid-column:span 4}
-  .offers{grid-template-columns:repeat(3,1fr)}
-  .offer{padding:30px 34px 30px 0;border-bottom:0;border-right:1px solid var(--rule)}
-  .offer:last-child{border-right:0;padding-right:0}
+  .offers{grid-template-columns:repeat(3,1fr);column-gap:58px}
+  .offer{padding:36px 0 36px;border-bottom:0}
   .kit{grid-template-columns:repeat(3,1fr)}
   .kit>div{padding-right:26px}
   .quotes{grid-template-columns:repeat(2,1fr);column-gap:44px}
